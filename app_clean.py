@@ -192,7 +192,8 @@ try:
     if "Actualisation de la donnée" in df.columns:
         df["Actualisation de la donnée"] = pd.to_datetime(
             df["Actualisation de la donnée"],
-            errors="coerce"
+            errors="coerce",
+            utc=True
         )
 
     # --------------------------------------------------
